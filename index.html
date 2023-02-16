@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @media (max-width: 90em) {
+        .container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 23.44em) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-rows: 40fr 80fr;
+        }
+        .img-box {
+          max-height: 20rem;
+        }
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-size: 1.4rem;
+        font-family: Montserrat;
+        color: hsl(212, 21%, 14%);
+        background-color: hsl(30, 38%, 92%);
+      }
+      .preview {
+        padding: 5rem 2rem;
+      }
+      .container {
+        display: grid;
+        margin: 0 auto;
+        max-width: 40rem;
+      }
+      .img-box {
+        width: 100%;
+      }
+      .img-box img {
+        width: 100%;
+      }
+      .text-box {
+        padding: 2.5rem;
+        height: 30rem;
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+      }
+      .perfume {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: hsl(230, 4%, 72%);
+        font-family: Montserrat;
+        font-weight: 500;
+      }
+      .title {
+        font-family: Fraunces;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 0.9;
+      }
+      .description {
+        font-size: 1rem;
+        color: rgb(162, 161, 161);
+        font-weight: 300;
+        line-height: 1.4;
+      }
+      .prices {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+      }
+      .cur-price {
+        font-weight: 700;
+        color: hsl(158, 36%, 37%);
+        font-size: 2rem;
+        font-family: Fraunces;
+      }
+      .original-price {
+        color: rgb(145, 143, 143);
+      }
+      .add-cart:link,
+      .add-cart:visited {
+        display: block;
+        text-decoration: none;
+        padding: 0.8rem 2rem;
+        background-color: hsl(158, 36%, 37%);
+        color: white;
+        border: none;
+        border-radius: 9px;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        justify-content: center;
+      }
+      .add-cart:hover {
+        background-color: hsl(157, 34%, 24%);
+      }
+      .cart-icon {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview">
+      <div class="container">
+        <div class="img-box">
+          <img
+            src="./images/image-product-desktop.jpg"
+            alt="img of the box in desktop"
+          />
+        </div>
+        <div class="text-box">
+          <h1 class="perfume">PERFUME</h1>
+          <p class="title">Gabrielle Essence Eau De Parfum</p>
+          <p class="description">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="prices">
+            <span class="cur-price">$149.99</span>
+            <span class="original-price"><del>$169.99</del> </span>
+          </div>
+
+          <a href="#" class="add-cart">
+            <svg
+              width="15"
+              class="cart-icon"
+              height="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+                fill="#FFF"
+              /></svg
+            ><span class="atc">Add to Cart</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Rebel</a>.
+    </div>
+  </body>
+</html>
