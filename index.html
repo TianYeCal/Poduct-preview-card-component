@@ -57,7 +57,10 @@
         background-color: hsl(30, 38%, 92%);
       }
       .preview {
-        padding: 5rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
       }
       .container {
         display: grid;
@@ -143,7 +146,7 @@
     </style>
   </head>
   <body>
-    <section class="preview">
+    <main class="preview">
       <div class="container">
         <div class="img-box">
           <img
@@ -178,13 +181,13 @@
           </a>
         </div>
       </div>
-    </section>
+    </main>
 
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Rebel</a>.
-    </div>
+    </footer>
   </body>
 </html>
